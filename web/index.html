@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>trellis</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <span class="brand">trellis</span>
+  <div id="tools">
+    <button data-tool="select" class="on" title="V">Select</button>
+    <button data-tool="frame" title="F">Frame</button>
+    <button data-tool="rect" title="R">Rectangle</button>
+    <button data-tool="ellipse" title="O">Ellipse</button>
+    <button data-tool="text" title="T">Text</button>
+  </div>
+  <label>Fill <input type="color" id="fill" value="#4f8cff"></label>
+  <label>Name <input id="name" size="8"></label>
+  <button id="offline">Go offline</button>
+  <span id="status" class="dim"></span>
+</header>
+<main>
+  <aside id="layers"></aside>
+  <canvas id="canvas"></canvas>
+  <aside id="props"></aside>
+</main>
+<script type="module" src="app.js"></script>
+</body>
+</html>

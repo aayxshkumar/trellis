@@ -1,0 +1,28 @@
+:root {
+  --bg: #f4f4f2;
+  --panel: #ffffff;
+  --line: #dcdcd8;
+  --text: #1d1f22;
+  --dim: #6c7077;
+  --accent: #2f6fed;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg: #1b1c1f; --panel: #232428; --line: #34363c; --text: #e6e6e3; --dim: #9a9da3; --accent: #6b9cff; }
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; }
+body { display: flex; flex-direction: column; background: var(--bg); color: var(--text); font: 13px/1.4 system-ui, sans-serif; }
+header { display: flex; gap: 12px; align-items: center; padding: 6px 12px; background: var(--panel); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.brand { font-weight: 700; margin-right: 8px; }
+button { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); padding: 4px 10px; cursor: pointer; }
+button.on { border-color: var(--accent); color: var(--accent); }
+input { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); padding: 2px 4px; }
+label, .dim { color: var(--dim); }
+main { flex: 1; display: flex; min-height: 0; }
+aside { width: 200px; background: var(--panel); border-right: 1px solid var(--line); overflow: auto; padding: 8px 0; }
+#props { border-right: 0; border-left: 1px solid var(--line); padding: 8px; }
+canvas { flex: 1; min-width: 0; display: block; background: var(--bg); }
+.layer { padding: 2px 8px; cursor: pointer; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.layer.sel { background: var(--accent); color: #fff; }
+.prop { display: flex; justify-content: space-between; margin: 4px 0; }
+.prop input { width: 90px; }
